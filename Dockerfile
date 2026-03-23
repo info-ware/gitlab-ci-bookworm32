@@ -1,4 +1,4 @@
-FROM i386/debian:trixie
+FROM debian:trixie
 
 RUN apt-get update && apt-get install -y build-essential
 RUN apt-get install -y devscripts cmake gcc g++ debhelper 

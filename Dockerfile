@@ -13,5 +13,8 @@ RUN apt-get install -y qt6-base-dev
 RUN apt-get install -y zlib1g-dev zip unzip
 RUN apt-get install -y libxext-dev libz3-dev
 
+RUN dpkg --add-architecture i386
+RUN apt-get update && apt-get install -y libasound2-dev:i386 libgles2-mesa-dev:i386
+
 # add ccache to PATH
 ENV PATH /usr/lib/ccache:${PATH}
